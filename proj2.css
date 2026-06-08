@@ -1,0 +1,303 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#08120c;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#4ade80;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4ade80;
+}
+
+.hero{
+height:100vh;
+background:url('https://i.postimg.cc/8ztzp6qm/Whats-App-Image-2026-06-08-at-11-31-26-AM-(1).jpg')
+center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,.55);
+padding:50px;
+border-radius:20px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+background:#22c55e;
+text-decoration:none;
+color:white;
+border-radius:50px;
+}
+
+.btn:hover{
+background:#16a34a;
+}
+
+section{
+padding:100px 10%;
+text-align:center;
+}
+
+h2{
+font-size:42px;
+margin-bottom:30px;
+color:#4ade80;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+width:320px;
+padding:30px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.stats{
+display:flex;
+justify-content:space-around;
+background:#0f1c13;
+padding:70px;
+}
+
+.stats h1{
+font-size:50px;
+color:#4ade80;
+}
+
+footer{
+background:black;
+padding:25px;
+text-align:center;
+}
+.rescue-card{
+    background:#111827;
+    margin:40px 0;
+    padding:30px;
+    border-radius:20px;
+    text-align:left;
+}
+
+.photo-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.photo-gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.video-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+.video-gallery video{
+    width:100%;
+    max-width:400px;
+    height:auto;
+    border-radius:15px;
+}
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1024px) {
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.cards {
+    gap: 15px;
+}
+
+.stats {
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+}
+
+@media (max-width: 768px) {
+
+/* HEADER STACK FIX */
+header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 8px 10px;
+    font-size: 14px;
+}
+
+/* HERO TEXT FIX */
+.hero h1 {
+    font-size: 32px;
+}
+
+.hero p {
+    font-size: 14px;
+}
+
+.hero-overlay {
+    padding: 25px;
+}
+
+/* SECTION SPACING */
+section {
+    padding: 60px 5%;
+}
+
+/* CARDS STACK */
+.cards {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* STAT SECTION */
+.stats {
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.stats h1 {
+    font-size: 35px;
+}
+
+/* RESCUE CARD FIX */
+.rescue-card {
+    text-align: center;
+}
+
+/* MEDIA FIX */
+.photo-gallery,
+.video-gallery {
+    grid-template-columns: 1fr;
+}
+
+.gallery {
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 480px) {
+
+.hero h1 {
+    font-size: 26px;
+}
+
+.hero p {
+    font-size: 13px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+nav a {
+    font-size: 12px;
+    margin: 5px;
+}
+
+}
